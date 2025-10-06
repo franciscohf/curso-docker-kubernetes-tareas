@@ -13,7 +13,7 @@ docker ps -a
 
 docker logs e9182078cf3c
 
-# ComandoComandos de limpieza
+# Comandos de limpieza
 
 docker stop e9182078cf3c
 
