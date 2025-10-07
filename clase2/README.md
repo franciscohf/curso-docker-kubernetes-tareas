@@ -71,17 +71,17 @@ docker build -t spring-boot-docker:v1.0 .
 
 ## Testing
 
-![Docker Images](./screenshots/docker-images.png)
+![Docker Images](./screenshots/docker-images.PNG)
 
-![Container Running](./screenshots/docker-ps.png)
+![Container Running](./screenshots/docker-ps.PNG)
 
-![API Response](./screenshots/endpoints.png)
+![API Response](./screenshots/endpoints.PNG)
 
 ## Docker Hub
 
 **URL:** https://hub.docker.com/repository/docker/francisco13/spring-boot-api
 
-![Docker Hub](screenshots/dockerhub.png)
+![Docker Hub](screenshots/dockerhub.PNG)
 
 ## Optimizaciones
 
