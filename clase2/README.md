@@ -16,12 +16,19 @@
 \`\`\`dockerfile
 # Stage 1: Build
 # Fase de compilación con imagen ligera de OpenJDK 21
+
 FROM openjdk:21-slim AS builder
+
 RUN addgroup --gid 1002 appgroup && useradd --uid 1002 -g appgroup -s /bin/bash appuser
+
 WORKDIR /app
+
 COPY pom.xml .
+
 RUN apt-get update && apt-get install -y maven
+
 COPY src ./src
+
 RUN mvn clean install -DskipTests
 
 
@@ -65,7 +72,9 @@ docker build -t spring-boot-docker:v1.0 .
 ## Testing
 
 ![Docker Images](./screenshots/docker-images.png)
+
 ![Container Running](./screenshots/docker-ps.png)
+
 ![API Response](./screenshots/endpoints.png)
 
 ## Docker Hub
