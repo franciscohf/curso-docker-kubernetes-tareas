@@ -1,0 +1,45 @@
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./html:/usr/share/nginx/html
+    networks:
+      - app_network
+      
+  mysql_db:
+    container_name: mysql_database
+    image: mysql
+    volumes:
+      - mysql-db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: comercial
+      MYSQL_USER: francisco
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    networks:
+      - app_network
+    
+  adminer:
+    depends_on:
+      - mysql_db
+    container_name: adminer_gestor
+    image: adminer
+    ports:
+      - "8080:8080"
+    environment:
+     ADMINER_DEFAULT_USER: david
+     ADMINER_DEFAULT_PASSWORD: 789456
+    networks:
+      - app_network
+
+networks:
+  app_network:
+   driver: bridge
+    
+volumes:
+  mysql-db:
+   name: mysql-db
