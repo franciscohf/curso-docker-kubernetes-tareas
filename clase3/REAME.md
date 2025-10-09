@@ -14,44 +14,50 @@ Crea un servicio web con pagina estatitica, un mysql con su gestor adminer todos
 ## Ejecución
 
 1. Clonar:
-   git clone https://github.com/tu-usuario/tu-repo.git
+   git clone https://github.com/franciscohf/curso-docker-kubernetes-tareas.git
    cd curso-docker-kubernetes-tareas
+   cd clase3
 
 2. Levantar servicios:
 docker compose up -d
 
-
-
 3. Acceder:
 
-    API: http://localhost:3000
+   API web: http://localhost:80/index.html
+
+   adminer: http://localhost:8080
 
 
-
-### 4. Cómo Probar
-
-```markdown
 ## Verificación
 
 1. Servicios corriendo:
    ```bash
    docker compose ps
+   ```
 
-Acceder a la web: http://localhost:XXXX
+2. Acceder a la web: http://localhost:80
 
-Verificar volumen persiste:
+3. Verificar volumen persiste:
+   ```bash
+   docker compose down
+   docker compose up -d
+   docker volume ls  
 
-docker compose down
-docker compose up -d
-docker volume ls  # debe seguir existiendo
-
-### 5. Capturas de Pantalla
-
-```markdown
 ## Screenshots
 
 ### Servicios corriendo
-![compose ps](screenshots/services.png)
+![compose ps](./screenshots/docker_ps.png)
 
 ### API funcionando
-![API](screenshots/api.png)
+![API](./screenshots/api_web.png)
+
+### GESTOR BD
+![GESTOR](./screenshots/adminer.png)
+
+### volume
+![VOLUME](./screenshots/docker_volume.png)
+
+### PING
+![PING1](./screenshots/docker_ping_adminer_mysql.png)
+
+![PIN2](./screenshots/docker_ping_web_mysql.png)
