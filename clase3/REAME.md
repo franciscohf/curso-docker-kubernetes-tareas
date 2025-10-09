@@ -1,6 +1,7 @@
 # 
 
 **Curso:** Docker & Kubernetes - Clase 3
+
 **Estudiante:** Francisco H. Flores Huanca
 
 Crea un servicio web con pagina estatitica, un mysql con su gestor adminer todos en el network app_network
@@ -17,7 +18,7 @@ Crea un servicio web con pagina estatitica, un mysql con su gestor adminer todos
    git clone https://github.com/franciscohf/curso-docker-kubernetes-tareas.git
 
    cd curso-docker-kubernetes-tareas
-   
+
    cd clase3
 
 2. Levantar servicios:
